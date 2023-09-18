@@ -1832,69 +1832,6 @@
         }
       }
     },
-    "/ratings/elo": {
-      "get": {
-        "tags": [
-          "ratings"
-        ],
-        "summary": "Historical Elo ratings",
-        "description": "Elo rating data",
-        "operationId": "getEloRatings",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "year",
-            "description": "Season filter",
-            "in": "query",
-            "required": false,
-            "type": "integer"
-          },
-          {
-            "name": "week",
-            "description": "Maximum week filter",
-            "in": "query",
-            "required": false,
-            "type": "integer"
-          },
-          {
-            "name": "seasonType",
-            "description": "Maximum season type to consider (defaults to regular if week is specified else defaults to postseason)",
-            "in": "query",
-            "required": false
-          },
-          {
-            "name": "team",
-            "description": "Team filter",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "conference",
-            "description": "Conference filter",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/TeamEloRating"
-              }
-            }
-          },
-          "400": {
-            "description": "error"
-          }
-        }
-      }
-    },
     "/ratings/fpi": {
       "get": {
         "tags": [
